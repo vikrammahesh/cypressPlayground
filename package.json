@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --env configFileName=$npm_config_host --record --key eae47bc3-e18c-4f1d-9ade-d310d70cce82 --parallel"
+    "test": "npx cypress run --env configFileName=$npm_config_host --record --key eae47bc3-e18c-4f1d-9ade-d310d70cce82 --parallel"
   },
   "keywords": [],
   "author": "",
