@@ -1,7 +1,3 @@
-import signInPage from '../pageHelpers/signInPage.helpers'
-import route from '../pageHelpers/route.helper'
-import singInPage from '../pageHelpers/signInPage.helpers'
-
 describe('Practice Test scenarios', ()=>{
  it('This is my first test case', ()=>{
     cy.visit('/')

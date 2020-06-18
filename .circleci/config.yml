@@ -8,6 +8,7 @@ jobs:
         environment:
           ## this enables colors in the output
           TERM: xterm
+    parallelism: 2      
     steps:
       - checkout
       - restore_cache:
