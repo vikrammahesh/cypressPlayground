@@ -1,0 +1,9 @@
+{
+  "projectId": "zfvcnu",
+  "video": false,
+  "env":{
+    "userName": "test@test.com",
+    "password": "ttt"
+  },
+  "configFile": "qa"
+}

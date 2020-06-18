@@ -1,0 +1,13 @@
+node_modules/
+cypress/screenshots
+cypress/videos
+npm-debug.log
+reports/
+multiple-results/
+ignore_test/
+mochareports/
+mochawesome-report/
+cypress.env.json
+launch.json
+.env
+.DS_Store

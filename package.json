@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --env configFileName=$npm_config_host --record --key eae47bc3-e18c-4f1d-9ade-d310d70cce82 --parallel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
