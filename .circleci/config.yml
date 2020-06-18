@@ -1,40 +1,17 @@
-version: 2
-
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
 jobs:
-  test:
-    docker:
-      # the Docker image with Cypress dependencies
-      - image: cypress/base:8
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "package.json" }}
-            - dependencies-
-      - run: npm ci
-      - save_cache:
-          key: dependencies-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-            - ~/.cache
-      - run:
-          name: Run scripts
-          shell: /bin/bash
-          command: |
-            npm run test --host=qa
-      - store_artifacts:
-          path: cypress/screenshots
-      - store_artifacts:
-          path: cypress/videos
-      - store_test_results:
-          path: multiple-results
-
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
 workflows:
-  version: 2
-  tests:
-    jobs:
-      - test
-© 2020 GitHub, Inc.
+    build-and-test:
+      jobs:
+        - build-and-test
