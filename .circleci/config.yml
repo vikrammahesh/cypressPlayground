@@ -37,4 +37,3 @@ workflows:
   tests:
     jobs:
       - test
-© 2020 GitHub, Inc.
